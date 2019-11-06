@@ -11,6 +11,7 @@ import UIKit
 
 class MainViewController: UIViewController {
 
+    
     @IBOutlet weak var resultButton: UIButton!
     @IBOutlet weak var startGameButton: UIButton!
     @IBOutlet weak var countAnswerLabel: UILabel!
@@ -19,12 +20,12 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
 
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
         case "startGameSeque":
             guard let destination = segue.destination as? GameSceneViewController else {return}
-            destination.gameDelegate = self 
-            
+            destination.gameDelegate = self
         default:
             break
         }

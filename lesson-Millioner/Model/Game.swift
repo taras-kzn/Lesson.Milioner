@@ -20,6 +20,9 @@ final class Game {
             recordsCarectaker.saveGame(records: self.records)
         }
     }
+    
+    var setting: Difficulty = .standart
+    
     private(set) var allQuestion: Int = 0
     
     private init() {
